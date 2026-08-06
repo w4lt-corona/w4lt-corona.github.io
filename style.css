@@ -108,10 +108,16 @@ body {
 /* Buttons */
 .cta-links {
     display: flex;
-    gap: 12px;
-    justify-content: flex-start;
+    gap: 10px;
     flex-wrap: wrap;
     margin: 24px 0 8px;
+}
+
+.cta-links .btn {
+    flex: 1 1 140px;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 11px 14px;
 }
 
 .btn {
@@ -165,8 +171,8 @@ body {
 }
 
 .social-icons svg {
-    width: 26px;          /* was 26px */
-    height: 26px;
+    width: 32px;          /* was 26px */
+    height: 32px;
 }
 
 /* Footer */
@@ -177,7 +183,7 @@ footer {
 }
 
 .footer-logo {
-    width: 100px;
+    width: 48px;
     height: auto;
     margin-bottom: 10px;
     opacity: 0.9;
