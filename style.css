@@ -215,4 +215,27 @@ footer p {
     footer {
         padding: 24px 20px 32px;
     }
+    /* Testimonials */
+.testimonial {
+    margin-bottom: 28px;
+    text-align: left;
+}
+
+.testimonial:last-child {
+    margin-bottom: 0;
+}
+
+.quote {
+    font-size: 1rem;
+    color: #D4CDBF;
+    opacity: 0.95;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-size: 0.95rem;
+    color: #D4A017;
+    font-weight: 500;
+}
 }
