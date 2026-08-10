@@ -95,14 +95,13 @@ body {
     overflow: hidden;
     background: #0d1118;
 }
-
 /* Testimonials */
 .testimonial {
-    margin-bottom: 32px;
+    margin-bottom: 48px;   /* increased spacing between testimonials */
 }
 
 .testimonial:last-child {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .quote {
@@ -110,15 +109,15 @@ body {
     color: #D4CDBF;
     opacity: 0.95;
     line-height: 1.7;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .author {
     font-size: 0.95rem;
     color: #D4A017;
     font-weight: 500;
+    margin-bottom: 0;
 }
-
 /* Buttons */
 .cta-links {
     display: flex;
