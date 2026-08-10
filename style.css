@@ -12,24 +12,21 @@ body {
     min-height: 100vh;
 }
 
-/* Outer page */
 .page {
     display: flex;
     justify-content: center;
     padding: 40px 16px;
 }
 
-/* Main card */
 .card {
     width: 100%;
-    max-width: 720px;          /* was 480px – now wider */
+    max-width: 640px;
     background: #121722;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 
-/* Headshot */
 .headshot-wrapper {
     width: 100%;
     line-height: 0;
@@ -42,7 +39,6 @@ body {
     object-fit: cover;
 }
 
-/* Name section (top box) */
 .name-section {
     background: #171B24;
     text-align: left;
@@ -63,12 +59,10 @@ body {
     opacity: 0.85;
 }
 
-/* Content area */
 .content {
     padding: 10px 0 20px;
 }
 
-/* Sections */
 .section {
     padding: 28px 28px 10px;
     text-align: left;
@@ -82,7 +76,7 @@ body {
 }
 
 .gold-line {
-    width: 90px;                 /* long enough to cover “Portfolio” */
+    width: 90px;
     height: 3px;
     background: #D4A017;
     margin: 0 0 18px 0;
@@ -93,11 +87,8 @@ body {
     font-size: 1rem;
     color: #D4CDBF;
     opacity: 0.9;
-    max-width: 100%;
-    margin: 0;
 }
 
-/* Player */
 .player-wrapper {
     margin: 24px 0 0;
     border-radius: 10px;
@@ -105,24 +96,45 @@ body {
     background: #0d1118;
 }
 
+/* Testimonials */
+.testimonial {
+    margin-bottom: 32px;
+}
+
+.testimonial:last-child {
+    margin-bottom: 8px;
+}
+
+.quote {
+    font-size: 1rem;
+    color: #D4CDBF;
+    opacity: 0.95;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.author {
+    font-size: 0.95rem;
+    color: #D4A017;
+    font-weight: 500;
+}
+
 /* Buttons */
 .cta-links {
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 12px;
     margin: 24px 0 8px;
 }
 
 .cta-links .btn {
-    flex: 1 1 140px;
+    width: 100%;
     text-align: center;
-    font-size: 0.9rem;
-    padding: 11px 14px;
+    padding: 13px 20px;
 }
 
 .btn {
     display: inline-block;
-    padding: 11px 20px;
     border-radius: 6px;
     text-decoration: none;
     font-size: 0.95rem;
@@ -171,7 +183,7 @@ body {
 }
 
 .social-icons svg {
-    width: 32px;          /* was 26px */
+    width: 32px;
     height: 32px;
 }
 
@@ -183,7 +195,7 @@ footer {
 }
 
 .footer-logo {
-    width: 48px;
+    width: 72px;
     height: auto;
     margin-bottom: 10px;
     opacity: 0.9;
@@ -215,27 +227,4 @@ footer p {
     footer {
         padding: 24px 20px 32px;
     }
-    /* Testimonials */
-.testimonial {
-    margin-bottom: 28px;
-    text-align: left;
-}
-
-.testimonial:last-child {
-    margin-bottom: 0;
-}
-
-.quote {
-    font-size: 1rem;
-    color: #D4CDBF;
-    opacity: 0.95;
-    line-height: 1.7;
-    margin-bottom: 10px;
-}
-
-.author {
-    font-size: 0.95rem;
-    color: #D4A017;
-    font-weight: 500;
-}
 }
