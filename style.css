@@ -95,13 +95,22 @@ body {
     overflow: hidden;
     background: #0d1118;
 }
-/* Testimonials */
-.testimonial {
-    margin-bottom: 48px;   /* increased spacing between testimonials */
+/* Testimonials carousel */
+.testimonial-carousel {
+    overflow: hidden;
+    width: 100%;
 }
 
-.testimonial:last-child {
-    margin-bottom: 12px;
+.testimonial-track {
+    display: flex;
+    transition: transform 0.45s ease;
+    will-change: transform;
+}
+
+.testimonial-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+    box-sizing: border-box;
 }
 
 .quote {
@@ -117,6 +126,33 @@ body {
     color: #D4A017;
     font-weight: 500;
     margin-bottom: 0;
+}
+
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0 8px;
+}
+
+.testimonial-dots .dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #3a4555;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.testimonial-dots .dot.active {
+    background: #D4A017;
+    transform: scale(1.15);
+}
+
+.testimonial-dots .dot:hover {
+    background: #c9b48a;
 }
 /* Buttons */
 .cta-links {
