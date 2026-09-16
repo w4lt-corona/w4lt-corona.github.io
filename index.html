@@ -58,31 +58,35 @@
                     </div>
                 </section>
 
-                <!-- Testimonials -->
+                <!-- Testimonials carousel: one quote visible, next slides in from the side -->
                 <section class="section">
                     <h2>Testimonials</h2>
                     <div class="gold-line"></div>
 
-                    <div class="testimonial">
-                        <p class="quote">
-                            “I've worked with Walt Corona on several game projects. He not only creates strong music and SFX across a range of genres within the rapid pace of game development, but also makes sure his work is ready for developers to use. He collaborates well with teams, including fellow composers and other members of a project such as programmers. Walt will have all the audio needs of your game handled. My favourite of his works is the Whale song.”
-                        </p>
-                        <p class="author">— Sarah N. (Game Dev)</p>
+                    <div class="testimonial-carousel" id="testimonialCarousel">
+                        <div class="testimonial-track" id="testimonialTrack">
+                            <article class="testimonial-slide">
+                                <p class="quote">
+                                    “I've worked with Walt Corona on several game projects. He not only creates strong music and SFX across a range of genres within the rapid pace of game development, but also makes sure his work is ready for developers to use. He collaborates well with teams, including fellow composers and other members of a project such as programmers. Walt will have all the audio needs of your game handled. My favourite of his works is the Whale song.”
+                                </p>
+                                <p class="author">— Sarah N. (Game Dev)</p>
+                            </article>
+                            <article class="testimonial-slide">
+                                <p class="quote">
+                                    “The music Walt has produced for our last two projects has been really great. He does an excellent job setting the tone and building the scene with each note.”
+                                </p>
+                                <p class="author">— Israel G. (Game Dev)</p>
+                            </article>
+                            <article class="testimonial-slide">
+                                <p class="quote">
+                                    “Speaking with full honesty, Walt has been one of the most active and engaged people I’ve worked with. He’s always curious about every aspect of the project, which is quite rare. It was a pleasure working with him in 3 projects.”
+                                </p>
+                                <p class="author">— Mohammad H. (Game Designer)</p>
+                            </article>
+                        </div>
                     </div>
 
-                    <div class="testimonial">
-                        <p class="quote">
-                            “The music Walt has produced for our last two projects has been really great. He does an excellent job setting the tone and building the scene with each note.”
-                        </p>
-                        <p class="author">— Israel G. (Game Dev)</p>
-                    </div>
-
-                    <div class="testimonial">
-                        <p class="quote">
-                            “Speaking with full honesty, Walt has been one of the most active and engaged people I’ve worked with. He’s always curious about every aspect of the project, which is quite rare. It was a pleasure working with him in 3 projects.”
-                        </p>
-                        <p class="author">— Mohammad H. (Game Designer)</p>
-                    </div>
+                    <div class="testimonial-dots" id="testimonialDots" aria-label="Choose a testimonial"></div>
                 </section>
 
                 <!-- Contact -->
@@ -137,5 +141,50 @@
 
         </div>
     </div>
+
+    <script>
+        (function () {
+            var track = document.getElementById("testimonialTrack");
+            var dotsWrap = document.getElementById("testimonialDots");
+            if (!track || !dotsWrap) return;
+
+            var slides = track.querySelectorAll(".testimonial-slide");
+            var index = 0;
+            var autoTimer = null;
+
+            slides.forEach(function (_, i) {
+                var btn = document.createElement("button");
+                btn.type = "button";
+                btn.className = "dot" + (i === 0 ? " active" : "");
+                btn.setAttribute("aria-label", "Show testimonial " + (i + 1));
+                btn.addEventListener("click", function () {
+                    goTo(i);
+                    restartAuto();
+                });
+                dotsWrap.appendChild(btn);
+            });
+
+            function goTo(i) {
+                index = (i + slides.length) % slides.length;
+                track.style.transform = "translateX(-" + index * 100 + "%)";
+                var dots = dotsWrap.querySelectorAll(".dot");
+                dots.forEach(function (dot, d) {
+                    if (d === index) dot.classList.add("active");
+                    else dot.classList.remove("active");
+                });
+            }
+
+            function next() {
+                goTo(index + 1);
+            }
+
+            function restartAuto() {
+                if (autoTimer) clearInterval(autoTimer);
+                autoTimer = setInterval(next, 7000);
+            }
+
+            restartAuto();
+        })();
+    </script>
 </body>
 </html>
