@@ -95,6 +95,64 @@ body {
     overflow: hidden;
     background: #0d1118;
 }
+/* Credits */
+.credit-group {
+    margin-bottom: 22px;
+}
+
+.credit-group h3 {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #D4A017;
+    margin-bottom: 10px;
+}
+
+.credit {
+    margin-bottom: 14px;
+}
+
+.credit-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #D4CDBF;
+    margin-bottom: 2px;
+    opacity: 1;
+}
+
+.credit-title a {
+    color: #D4CDBF;
+    text-decoration: none;
+}
+
+.credit-title a:hover {
+    color: #D4A017;
+}
+
+.credit-meta {
+    font-size: 0.92rem;
+    color: #D4CDBF;
+    opacity: 0.8;
+    margin-bottom: 2px;
+}
+
+.credit-meta a {
+    color: #D4CDBF;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.credit-meta a:hover {
+    color: #D4A017;
+}
+
+.credit-note {
+    font-size: 0.92rem;
+    color: #D4CDBF;
+    opacity: 0.75;
+}
+
 /* Testimonials carousel */
 .testimonial-carousel {
     overflow: hidden;
